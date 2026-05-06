@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next'
 import './globals.css'
 import { Toaster } from 'sonner'
-import { SessionProvider } from "next-auth/react"
+import Providers from './providers'
 
 export const metadata: Metadata = {
   title: 'Visual X • TV Mode for X',
@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="bg-black text-white antialiased">
-        <SessionProvider>
+        <Providers>
           {children}
-        </SessionProvider>
+        </Providers>
         <Toaster position="top-center" richColors closeButton />
       </body>
     </html>
