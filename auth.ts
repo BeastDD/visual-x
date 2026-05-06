@@ -1,6 +1,5 @@
-// auth.ts
-import NextAuth from "next-auth"
-import Twitter from "next-auth/providers/twitter"
+﻿import NextAuth from 'next-auth'
+import Twitter from 'next-auth/providers/twitter'
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
@@ -9,7 +8,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       clientSecret: process.env.AUTH_TWITTER_SECRET,
       authorization: {
         params: {
-          scope: "users.read tweet.read offline.access",
+          scope: 'users.read tweet.read offline.access',
         },
       },
     }),
@@ -29,8 +28,5 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       }
       return session
     },
-  },
-  pages: {
-    signIn: "/login",
   },
 })

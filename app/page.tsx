@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, SkipBack, SkipForward, Shuffle, Volume2, Users, Share2, Plus, LogOut } from 'lucide-react';
@@ -178,7 +178,7 @@ export default function VisualX() {
     const newChannel: Channel = {
       id: `custom-${Date.now()}`,
       name: `${handle}'s Feed`,
-      icon: '👤',
+      icon: 'ðŸ‘¤',
       description: `Videos from @${handle}`,
       isCustom: true,
       videos: [
@@ -230,7 +230,7 @@ export default function VisualX() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-x-red rounded-xl flex items-center justify-center text-2xl">📺</div>
+              <div className="w-9 h-9 bg-x-red rounded-xl flex items-center justify-center text-2xl">ðŸ“º</div>
               <div>
                 <h1 className="text-2xl font-bold tracking-tighter">VISUAL X</h1>
                 <p className="text-[10px] text-white/50 -mt-1">TV FOR X</p>
@@ -299,7 +299,7 @@ export default function VisualX() {
           </div>
 
           <div className="mt-auto pt-4 border-t border-white/10 text-xs text-white/50 px-3">
-            <div>9 Premade • {myChannels.length + sharedChannels.length} Custom</div>
+            <div>9 Premade â€¢ {myChannels.length + sharedChannels.length} Custom</div>
             <div className="mt-1">Press <span className="font-mono">F</span> for TV Mode</div>
           </div>
         </div>
@@ -310,7 +310,7 @@ export default function VisualX() {
             <div className="flex-1 flex items-center justify-center">
               <div className="text-center max-w-md">
                 <div className="mx-auto w-20 h-20 bg-white/5 rounded-3xl flex items-center justify-center mb-6">
-                  <span className="text-6xl">📺</span>
+                  <span className="text-6xl">ðŸ“º</span>
                 </div>
                 <h2 className="text-4xl font-bold tracking-tighter mb-3">Welcome to Visual X</h2>
                 <p className="text-white/60 mb-8">Select a channel from the sidebar to begin the infinite TV experience.</p>
@@ -318,7 +318,7 @@ export default function VisualX() {
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div className="bg-white/5 p-4 rounded-2xl">
                     <div className="font-semibold mb-1">TV Mode</div>
-                    <div className="text-xs text-white/50">Random • Auto-next • Infinite</div>
+                    <div className="text-xs text-white/50">Random â€¢ Auto-next â€¢ Infinite</div>
                   </div>
                   <div className="bg-white/5 p-4 rounded-2xl">
                     <div className="font-semibold mb-1">Custom Feeds</div>
@@ -425,12 +425,12 @@ export default function VisualX() {
               <div className="h-14 border-t border-white/10 bg-black/80 px-6 flex items-center justify-between text-sm">
                 <div className="flex items-center gap-4 text-white/60">
                   <div>Channel {currentChannel.name}</div>
-                  <div>•</div>
+                  <div>â€¢</div>
                   <div>{currentVideoIndex + 1} / {queue.length}</div>
-                  <div>•</div>
+                  <div>â€¢</div>
                   <div className={isShuffle ? 'text-x-red' : ''}>Shuffle {isShuffle ? 'ON' : 'OFF'}</div>
                 </div>
-                <div className="text-xs text-white/40">Space: Play/Pause • ← → : Skip • S: Shuffle • F: Full TV</div>
+                <div className="text-xs text-white/40">Space: Play/Pause â€¢ â† â†’ : Skip â€¢ S: Shuffle â€¢ F: Full TV</div>
               </div>
             </>
           )}
@@ -515,7 +515,7 @@ export default function VisualX() {
               animate={{ scale: 1, opacity: 1 }}
               className="max-w-md text-center p-10"
             >
-              <div className="text-7xl mb-6">🔞</div>
+              <div className="text-7xl mb-6">ðŸ”ž</div>
               <h2 className="text-4xl font-bold tracking-tight mb-4">18+ Content</h2>
               <p className="text-white/70 mb-8 leading-relaxed">
                 This channel contains mature content. By continuing you confirm you are 18 years or older.
