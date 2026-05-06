@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Toaster } from 'sonner'
+import { SessionProvider } from "next-auth/react"
 
 export const metadata: Metadata = {
   title: 'Visual X • TV Mode for X',
@@ -8,8 +9,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
-    ],
-    shortcut: '/icon.png',
+    ],n    shortcut: '/icon.png',
     apple: '/icon.png',
   },
 }
@@ -22,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black text-white">
-        {children}
+        <SessionProvider>
+          {children}
+        </SessionProvider>
         <Toaster position="top-center" richColors closeButton />
       </body>
     </html>
